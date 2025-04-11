@@ -1,0 +1,80 @@
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.signup-form .input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.signup-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background: #0066CC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.signup-btn:hover {
+    background: #0052a3;
+}
+
+.signup-link {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.login-link {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

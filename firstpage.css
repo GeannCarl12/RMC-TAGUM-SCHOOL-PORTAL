@@ -1,0 +1,1472 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #00a3ff;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 60px;
+    background: #00a2ff6c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+    box-sizing: border-box;
+    border: none;
+    backdrop-filter: blur(10px);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
+
+.portal-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portal-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    text-transform: none;
+    color: white;
+}
+
+.portal-title h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.2;
+    color: white;
+}
+
+/* Update container margin */
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+
+
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;  /* increased gap between links */
+    margin: 0;
+    padding: 0;
+    align-items: center;  /* center vertically */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    border: none;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+    border: none;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Single hover style */
+
+.nav-links a:hover {
+    background: none;
+}
+
+/* Update container margin to match new navbar height */
+.container {
+    display: flex;
+    margin-top: 80px;
+    padding: 4rem 6rem;
+    min-height: calc(100vh - 80px);
+    position: relative;
+    background: #0f6090;
+    overflow: visible;
+    z-index: 1;  /* Added to ensure proper stacking */
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* Content section */
+
+
+
+
+.image-section {
+    width: 45%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.png') center/cover no-repeat;
+    z-index: 1;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(12, 83, 124, 0.9), rgba(0, 119, 190, 0.95));
+    z-index: 1;
+}
+
+.content-section {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    padding: 2rem;
+    color: white;
+    background: rgba(238, 238, 238, 0.1);
+    border-radius: 10px;
+    margin-top: -4rem;  /* Increased negative margin to move content up */
+    padding-top: 0;     /* Removed top padding */
+    margin-right: 2rem;
+}
+
+.content-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.mission-text, .description {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+.motto-section {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.motto {
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+
+.motto-translation {
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Image section */
+.image-section {
+    width: 40%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    transform: translateY(-50%);
+    width: 130%;
+    height: 130%;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.background-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portal-btn {
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.portal-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portal-btn:active {
+    transform: translateY(0);
+}
+
+/* Remove duplicate styles and organize them */
+
+/* Login Form Styling */
+.login-section {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 48, 73, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 4rem;
+    transition: all 0.5s ease;
+    z-index: 1000; /* Increased z-index */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 1001; /* Ensure inputs are clickable */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative; /* Add position */
+    z-index: 1002; /* Higher than parent */
+}
+
+
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.contact-form input::placeholder {
+    color: #666666;
+}
+
+/* Remove duplicate form-group input styles */
+.form-group input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.form-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    color: white;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+}
+.radio-row {
+    display: none;
+}
+.radio-row label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.radio-row input[type="radio"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+.radio-row span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.next-btn {
+    background: transparent;
+    border: 2px solid white;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    color: white;
+}
+
+.next-btn:hover {
+    background: linear-gradient(90deg, #00E5FF 0%, #0052a2 100%);
+    color: white;
+}
+
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;  /* Reduced gap between checkbox and text */
+    color: white;
+}
+
+.remember-me input[type="checkbox"] {
+    margin: 0;
+}
+
+.remember-me label {
+    cursor: pointer;
+}
+
+.form-check label {
+    margin-left: 0.5rem;
+}
+
+.forgot-password-section {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 48, 73, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 4rem;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.forgot-password-section.active {
+    right: 0;
+}
+
+.forgot-password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+}
+
+.forgot-password-form.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #00E5FF 0%, #0052a2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.reset-btn:hover {
+    background: #0088d1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password-section h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+.forgot-password {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: white;
+}
+
+.signup-text {
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.signup-text a {
+    color: #00a3ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-text a:hover {
+    color: #0088d1;
+}
+
+.login-section h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.form-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    opacity: 0.7;
+}
+
+.remember-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+.forgot-password {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #00E5FF 0%, #0052a2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn:hover {
+    background: #0088d1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.login-btn:active::before {
+    width: 200%;
+    height: 200%;
+}
+
+.signup-section {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 48, 73, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 4rem;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.signup-section.active {
+    right: 0;
+    display: block;
+}
+
+.signup-section.show {
+    right: 0;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+}
+
+.signup-form.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #00E5FF 0%, #0052a2 100%);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-btn:hover {
+    background: #0088d1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the sign-up link in login form */
+.signup-text a {
+    cursor: pointer;
+    color: #00a3ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-text a:hover {
+    color: #0088d1;
+}
+
+/* Ensure overlay works for both login and signup */
+.overlay.show-signup {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+}
+
+.signup-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: white;
+}
+
+.login-link a {
+    color: #00a3ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #0088d1;
+}
+
+/* Additional form field for sign up */
+.signup-form .form-group input {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}
+
+.signup-form .form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-section a {
+    color: #00a3ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-section h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1003;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.close-btn::before {
+    content: '×';
+}
+
+.login-section.active {
+    right: 0;
+}
+
+.image-section {
+    transition: opacity 0.5s ease;
+}
+
+.image-section.fade {
+    opacity: 0;
+}
+
+.login-form {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+}
+
+.login-form.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Update button classes */
+
+
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+
+.form-group i:not(.password-toggle) {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.form-group input {
+    padding-left: 40px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: white;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #00E5FF 0%, #0052a2 100%);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #00E5FF 0%, #0052a2 100%);
+}
+
+/* Remove all close-btn related styles */
+/* Keep only the back button styling */
+/* Remove duplicate back button styles and consolidate them */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1003;
+}
+
+.back-btn::before {
+    content: '←';
+    margin-right: 4px;
+    font-size: 20px;
+}
+
+.back-btn::after {
+    content: 'Go back';
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
+}
+
+.back-btn i {
+    font-size: 14px;
+}
+
+.back-btn span {
+    font-weight: 500;
+}
+
+.back-btn::before {
+    content: '×';
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Footer styling */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 2rem;
+    z-index: 1000;
+}
+
+
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+.contact-item i {
+    font-size: 16px;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #00a3ff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.loading-screen.active {
+    display: flex;
+    opacity: 1;
+}
+
+.loading-logo {
+    width: 200px;
+    height: 200px;
+    animation: logoAnimation 2s infinite;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+}
+
+
+/* Base styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Container styles */
+
+
+/* Content section styles */
+
+
+.content-section h1 {
+    font-size: 48px;
+    margin-bottom: 1.5rem;  /* Reduced bottom margin */
+    letter-spacing: 1px;
+}
+
+.mission-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;  /* Reduced bottom margin */
+}
+
+/* Motto section styles */
+.motto-section {
+    margin: 2rem 0;  /* Reduced vertical margin */
+}
+
+.motto {
+    font-size: 56px;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;  /* Added smaller bottom margin */
+}
+
+.motto-translation {
+    font-size: 20px;
+    margin-top: 0.5rem;  /* Reduced top margin */
+}
+
+/* Navbar styles */
+.navbar {
+    height: 80px;
+    padding: 15px 80px;
+}
+
+
+
+.portal-title h1 {
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.portal-title h2 {
+    font-size: 18px;
+}
+
+.nav-links {
+    gap: 50px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    padding: 8px 0;
+}
+
+.dashboard-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00a3ff, #0088d1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2001;
+}
+
+.welcome-screen.active {
+    opacity: 1;
+}
+
+.welcome-header {
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.date {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-message p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 2rem;
+    border: 3px solid white;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(0, 229, 255, 0.85), rgba(0, 82, 162, 0.85)), url('studentmodels.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+    scroll-margin-top: 80px;  /* Added to account for fixed navbar */
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    margin-bottom: 3rem;
+}
+
+.about-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.about-cards:has(.inquire-card) {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('jobmodels.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(1px);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+}
+
+.about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: justify;
+}
+
+.contact-section {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;  /* Changed from 100% to 40% to match sign-in width */
+    height: 100%;
+    backdrop-filter: blur(12px);
+    padding: 4rem;
+    transition: all 0.5s ease;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.contact-section.active {
+    right: 0; /* Changed to slide from right */
+}
+
+.content-section h1 {
+    font-size: 48px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.contact-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Changed to column for better mobile layout */
+    gap: 30px;
+    padding: 20px ;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: transparent;
+}
+
+.contact-form {
+    flex: 1;
+    
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    max-width: 600px;
+    overflow-y: auto;
+   
+    max-height: none;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: white;
+}
+.contact-form p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-image {
+    display: none;  /* Hide the image section */
+}
+
+.contact-image img {
+    display: none;  /* Hide the image */
+}
+
+.contact-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1003;
+}
+
+.contact-back-btn::before {
+    content: '×';
+    margin-right: 4px;
+    font-size: 20px;
+}
+
+.contact-back-btn::after {
+    content: 'Go back';
+    font-weight: 500;
+}
+
+.contact-back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
+}
+
+.courses-header {
+    text-align: center;
+    margin: 3rem 0 2rem;
+}
+
+.courses-header h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.courses-header p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.inquire-card {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;  /* Ensure all cards have same height */
+    background: transparent;
+}
+
+.inquire-btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #00E5FF 0%, #0052a2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.inquire-btn:hover {
+    background-color: #003d7a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.inquire-btn:active {
+    transform: translateY(-1px);
+}
+
+.inquire-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.inquire-btn:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+.mve-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.mve-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(1px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.mve-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.mve-box h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mve-box h3 i {
+    color: #00E5FF;
+}
+
+.mve-box p {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: justify;
+}
+

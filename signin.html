@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - RMC Tagum Student Portal</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="signin-container">
+        <img src="logo.png" alt="RMC Logo" class="signin-logo">
+        <h1>Sign In</h1>
+        <form id="signinForm">
+            <input type="text" id="idNumber" placeholder="I.D. Number" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" id="rememberMe"> Remember me
+                </label>
+                <a href="#" class="forgot-password">Forgot Password</a>
+            </div>
+            <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="signin.js"></script>
+</body>
+</html>
