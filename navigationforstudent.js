@@ -775,3 +775,4 @@ heartButton.addEventListener('click', function() {
 
 // Inside the scholarship button click handler, after keeping main content visible
 
+
