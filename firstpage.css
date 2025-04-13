@@ -1470,3 +1470,86 @@ html, body {
     text-align: justify;
 }
 
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .school-name {
+        font-size: 18px;
+    }
+
+    .login-form input {
+        width: 100%;
+        margin: 8px 0;
+        padding: 10px;
+    }
+
+    .login-form button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .forgot-password {
+        margin-top: 15px;
+    }
+
+    .social-login {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-login button {
+        width: 100%;
+    }
+
+    .divider {
+        margin: 15px 0;
+    }
+}
+
+/* Tablet Adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+
+    .login-container {
+        width: 80%;
+        padding: 30px;
+    }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .container {
+        margin: 10px auto;
+    }
+
+    .login-container {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .school-name {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+}
