@@ -29,9 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide other sections
             if (dashboardContainer) dashboardContainer.style.display = 'none';
             if (welcomeBanner) welcomeBanner.style.display = 'none';
+            if (welcomeBanner) welcomeBanner.style.display = 'none';
             if (clearanceSection) clearanceSection.style.display = 'none';
             if (todosSection) todosSection.style.display = 'none';
             if (mainContent) mainContent.style.display = 'block';
+            if (todosSection) todosSection.style.display = 'none';
+            if (classesSection) classesSection.style.display = 'none';
+            if (announcementsSection) announcementsSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
             
             // Create balance content if not exists
             if (!document.querySelector('.balance-section')) {
@@ -86,9 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide other sections
             if (clearanceSection) clearanceSection.style.display = 'none';
             if (todosSection) todosSection.style.display = 'none';
+            if (mainContent) mainContent.style.display = 'block';
+            if (todosSection) todosSection.style.display = 'none';
             if (classesSection) classesSection.style.display = 'none';
             if (announcementsSection) announcementsSection.style.display = 'none';
-            if (profileContent) profileContent.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
             
             // Update active state in navigation
             document.querySelectorAll('.nav-menu a').forEach(link => {
@@ -136,18 +154,32 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.profile-trigger, .profile-link, .nav-profile').forEach(trigger => {
         trigger.addEventListener('click', function(e) {
             e.preventDefault();
-            const mainContent = document.querySelector('.dashboard-container');
+            const mainContent = document.querySelector('.main-content');
             const profileContent = document.querySelector('.profile-content');
             const welcomeBanner = document.querySelector('.welcome-banner');
+            const dashboardContainer = document.querySelector('.dashboard-container');
+            
+            // Hide all other sections
+            if (clearanceSection) clearanceSection.style.display = 'none';
+            if (todosSection) todosSection.style.display = 'none';
+            if (classesSection) classesSection.style.display = 'none';
+            if (announcementsSection) announcementsSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
             
             if (profileContent.style.display === 'none') {
-                mainContent.style.display = 'none';
                 welcomeBanner.style.display = 'none';
+                dashboardContainer.style.display = 'none';
                 profileContent.style.display = 'block';
+                mainContent.style.display = 'block'; // Keep main content visible
             } else {
-                mainContent.style.display = 'flex';
                 welcomeBanner.style.display = 'flex';
+                dashboardContainer.style.display = 'flex';
                 profileContent.style.display = 'none';
+                mainContent.style.display = 'block';
             }
         });
     });
@@ -236,6 +268,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Add School News functionality
+const schoolNewsButton = document.querySelector('.grid-item:nth-child()');
+
+if (schoolNewsButton) {
+    schoolNewsButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Trigger the news link click event
+        const newsLink = document.querySelector('.nav-menu a[href="#news"]');
+        if (newsLink) {
+            newsLink.click();
+        }
+    });
+}
+
+
     // Add classes button functionality
     const classesLink = document.querySelector('.nav-menu a[href="#classes"]');
     const classesSection = document.createElement('div');
@@ -253,7 +301,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (clearanceSection) clearanceSection.style.display = 'none';
             if (todosSection) todosSection.style.display = 'none';
             if (mainContent) mainContent.style.display = 'block'; // Keep main content visible
-    
+            if (announcementsSection) announcementsSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+
             // Create classes content if not exists
             // Inside the classesLink click handler, after the schedule table
             if (!document.querySelector('.classes-section')) {
@@ -399,11 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show classes section
         classesSection.style.display = 'block';
         
-        // Update active state in navigation
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.classList.remove('active');
-        });
-        this.classList.add('active');
+        
     });
 }
     
@@ -425,6 +477,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (todosSection) todosSection.style.display = 'none';
             if (classesSection) classesSection.style.display = 'none';
             if (mainContent) mainContent.style.display = 'block';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
 
             // Create announcements content if not exists
             if (!document.querySelector('.announcements-section')) {
@@ -462,64 +521,34 @@ document.addEventListener('DOMContentLoaded', function() {
             announcementsSection.style.display = 'block';
             
             // Update active state in navigation
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.classList.remove('active');
-            });
-            this.classList.add('active');
+            
         });
     }
 
     
 
-    // Add school news button functionality
+    // Add news button functionality
     const newsLink = document.querySelector('.nav-menu a[href="#news"]');
     const newsSection = document.createElement('div');
     newsSection.classList.add('news-section');
 
-    // Add this function at the top of your DOMContentLoaded event handler
-    // Replace the existing hideAllSections function with this improved version
-    function hideAllSections() {
-        const sections = [
-            document.querySelector('.dashboard-container'),
-            document.querySelector('.welcome-banner'),
-            document.querySelector('.profile-content'),
-            document.querySelector('.clearance-section'),
-            document.querySelector('.todos-section'),
-            document.querySelector('.classes-section'),
-            document.querySelector('.announcements-section'),
-            document.querySelector('.news-section'),
-            document.querySelector('.enrollment-section'),
-            document.querySelector('.mvv-section'),
-            document.querySelector('.balance-section'),
-            document.querySelector('.clinic-section'),
-            document.querySelector('.scholarship-section'),
-            document.querySelector('.main-content')
-        ];
-    
-        sections.forEach(section => {
-            if (section) {
-                section.style.display = 'none';
-            }
-        });
-    }
-
-    // Update the showSection function to work with the new hideAllSections
-    function showSection(sectionName) {
-        hideAllSections();
-        const section = document.querySelector(`.${sectionName}-section`);
-        const mainContent = document.querySelector('.main-content');
-        
-        if (mainContent) mainContent.style.display = 'block';
-        if (section) section.style.display = 'block';
-    }
-
-    // Update the news link click handler
     if (newsLink) {
         newsLink.addEventListener('click', function(e) {
             e.preventDefault();
-            hideAllSections();
+            
+            // Hide other sections
+            if (dashboardContainer) dashboardContainer.style.display = 'none';
+            if (welcomeBanner) welcomeBanner.style.display = 'none';
+            if (clearanceSection) clearanceSection.style.display = 'none';
+            if (todosSection) todosSection.style.display = 'none';
+            if (classesSection) classesSection.style.display = 'none';
             if (mainContent) mainContent.style.display = 'block';
-    
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (announcementsSection) announcementsSection.style.display = 'none';
+
             // Create news content if not exists
             if (!document.querySelector('.news-section')) {
                 newsSection.innerHTML = `
@@ -611,40 +640,51 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.add('active');
     });
 }
+
+
     
     // Add enrollment button functionality
     const enrollmentLink = document.querySelector('.nav-menu a[href="#enrollment"]');
-    const enrollmentSection = document.createElement('div');
-    enrollmentSection.classList.add('enrollment-section');
-    
-    // Add enrollment section handler
-    document.querySelector('a[href="#enrollment"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        hideAllSections();
-        document.querySelector('.enrollment-section').style.display = 'block';
-    });
-    
-    function hideAllSections() {
-        // Hide all sections
-        document.querySelector('.dashboard-container').style.display = 'none';
-        document.querySelector('.welcome-banner').style.display = 'none';
-        document.querySelector('.profile-content').style.display = 'none';
-        document.querySelector('.clearance-section').style.display = 'none';
-        document.querySelector('.todos-section').style.display = 'none';
-        document.querySelector('.class-schedule-section').style.display = 'none';
-        document.querySelector('.school-news-section').style.display = 'none';
-        document.querySelector('.enrollment-section').style.display = 'none';
-        document.querySelector('.mvv-section').style.display = 'none';
-        document.querySelector('.balance-section').style.display = 'none';
-        document.querySelector('.clinic-section').style.display = 'none';
-        document.querySelector('.scholarship-section').style.display = 'none';
-        document.querySelector('.main-content').style.display = 'block';
-    }
+    const enrollmentSection = document.querySelector('.enrollment-section');
 
+    if (enrollmentLink) {
+        enrollmentLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Hide other sections
+            if (dashboardContainer) dashboardContainer.style.display = 'none';
+            if (welcomeBanner) welcomeBanner.style.display = 'none';
+            if (clearanceSection) clearanceSection.style.display = 'none';
+            if (todosSection) todosSection.style.display = 'none';
+            if (classesSection) classesSection.style.display = 'none';
+            if (announcementsSection) announcementsSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+    
+            // Create enrollment content if not exists
+            if (!document.querySelector('.enrollment-section')) {
+                // Your enrollment section HTML content here
+                document.querySelector('.main-content').appendChild(enrollmentSection);
+            }
+    
+            // Show enrollment section
+            enrollmentSection.style.display = 'block';
+            
+            // Update active state in navigation
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    }
+    
     // Add MVV button functionality
     const mvvLink = document.querySelector('.nav-menu a[href="#mvv"]');
     const mvvSection = document.querySelector('.mvv-section');
-    
+   
     if (mvvLink) {
         mvvLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -658,9 +698,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (announcementsSection) announcementsSection.style.display = 'none';
             if (newsSection) newsSection.style.display = 'none';
             if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none'
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+          
+           
+            if (mainContent) mainContent.style.display = 'block';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            
+            
+            // Create MVV content if not exists
+            
             
             // Show MVV section
-            if (mvvSection) mvvSection.style.display = 'block';
+            mvvSection.style.display = 'block';
             if (mainContent) mainContent.style.display = 'block';
             
             // Update active state in navigation
@@ -719,5 +774,4 @@ heartButton.addEventListener('click', function() {
 });
 
 // Inside the scholarship button click handler, after keeping main content visible
-
 
