@@ -732,7 +732,7 @@ if (schoolNewsButton) {
         console.log('Logout button clicked');
         if (loadingScreen) loadingScreen.classList.add('active');
         setTimeout(() => {
-            window.location.href = 'https://geanncarl12.github.io/RMC-TAGUM-SCHOOL-PORTAL/';
+            window.location.href = 'index.html';
         }, 5000);
     }
     
