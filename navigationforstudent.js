@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add School News functionality
-const schoolNewsButton = document.querySelector('.grid-item:nth-child()');
+const schoolNewsButton = document.querySelector('.grid-item:nth-child(7)');
 
 if (schoolNewsButton) {
     schoolNewsButton.addEventListener('click', function(e) {
