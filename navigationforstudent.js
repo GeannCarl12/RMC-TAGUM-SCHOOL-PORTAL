@@ -477,24 +477,40 @@ document.addEventListener('DOMContentLoaded', function() {
     newsSection.classList.add('news-section');
 
     // Add this function at the top of your DOMContentLoaded event handler
+    // Replace the existing hideAllSections function with this improved version
     function hideAllSections() {
         const sections = [
-            dashboardContainer,
-            welcomeBanner,
-            clearanceSection,
-            todosSection,
-            classesSection,
-            announcementsSection,
-            newsSection,
-            mvvSection,
-            enrollmentSection,
-            balanceSection,
-            scholarshipSection,
+            document.querySelector('.dashboard-container'),
+            document.querySelector('.welcome-banner'),
+            document.querySelector('.profile-content'),
+            document.querySelector('.clearance-section'),
+            document.querySelector('.todos-section'),
+            document.querySelector('.classes-section'),
+            document.querySelector('.announcements-section'),
+            document.querySelector('.news-section'),
+            document.querySelector('.enrollment-section'),
+            document.querySelector('.mvv-section'),
+            document.querySelector('.balance-section'),
+            document.querySelector('.clinic-section'),
+            document.querySelector('.scholarship-section'),
+            document.querySelector('.main-content')
         ];
-        
+    
         sections.forEach(section => {
-            if (section) section.style.display = 'none';
+            if (section) {
+                section.style.display = 'none';
+            }
         });
+    }
+
+    // Update the showSection function to work with the new hideAllSections
+    function showSection(sectionName) {
+        hideAllSections();
+        const section = document.querySelector(`.${sectionName}-section`);
+        const mainContent = document.querySelector('.main-content');
+        
+        if (mainContent) mainContent.style.display = 'block';
+        if (section) section.style.display = 'block';
     }
 
     // Update the news link click handler
@@ -618,6 +634,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.class-schedule-section').style.display = 'none';
         document.querySelector('.school-news-section').style.display = 'none';
         document.querySelector('.enrollment-section').style.display = 'none';
+        document.querySelector('.mvv-section').style.display = 'none';
+        document.querySelector('.balance-section').style.display = 'none';
+        document.querySelector('.clinic-section').style.display = 'none';
+        document.querySelector('.scholarship-section').style.display = 'none';
+        document.querySelector('.main-content').style.display = 'block';
     }
 
     // Add MVV button functionality
