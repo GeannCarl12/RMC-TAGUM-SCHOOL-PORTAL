@@ -1472,84 +1472,123 @@ html, body {
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+        height: auto;
+    }
+
+    .logo-section {
+        gap: 8px;
+    }
+
+    .logo-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .portal-title h1, .portal-title h2 {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
     .container {
-        width: 90%;
-        margin: 20px auto;
-        padding: 15px;
-    }
-
-    .login-container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .logo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .school-name {
-        font-size: 18px;
-    }
-
-    .login-form input {
-        width: 100%;
-        margin: 8px 0;
-        padding: 10px;
-    }
-
-    .login-form button {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .forgot-password {
-        margin-top: 15px;
-    }
-
-    .social-login {
         flex-direction: column;
-        gap: 10px;
+        padding: 2rem;
+        margin-top: 60px;
     }
 
-    .social-login button {
+    .content-section {
         width: 100%;
+        margin: 0;
+        padding: 1rem;
     }
 
-    .divider {
-        margin: 15px 0;
+    .content-section h1 {
+        font-size: 28px;
+    }
+
+    .mission-text, .description {
+        font-size: 14px;
+    }
+
+    .motto {
+        font-size: 32px;
+    }
+
+    .motto-translation {
+        font-size: 14px;
+    }
+
+    .image-section {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .image-wrapper {
+        max-width: 100%;
+    }
+
+    .login-section, .signup-section, .forgot-password-section {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .form-group input {
+        padding: 0.8rem;
+        font-size: 14px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .portal-btn {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    .footer {
+        padding: 0.5rem 1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
     }
 }
 
 /* Tablet Adjustments */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
-        width: 70%;
+        padding: 3rem;
     }
 
-    .login-container {
-        width: 80%;
-        padding: 30px;
+    .content-section {
+        width: 55%;
+    }
+
+    .image-section {
+        width: 45%;
+    }
+
+    .login-section, .signup-section, .forgot-password-section {
+        width: 50%;
     }
 }
 
 /* Landscape Mode */
 @media screen and (max-height: 500px) and (orientation: landscape) {
     .container {
-        margin: 10px auto;
+        margin-top: 50px;
+        min-height: calc(100vh - 50px);
     }
 
-    .login-container {
-        padding: 15px;
-    }
-
-    .logo img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .school-name {
-        font-size: 16px;
-        margin: 10px 0;
+    .login-section, .signup-section, .forgot-password-section {
+        overflow-y: auto;
     }
 }
