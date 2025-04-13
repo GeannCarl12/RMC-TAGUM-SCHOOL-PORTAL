@@ -1472,31 +1472,9 @@ html, body {
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-    .navbar {
-        padding: 12px 20px;
-        height: auto;
-    }
-
-    .logo-section {
-        gap: 8px;
-    }
-
-    .logo-img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .portal-title h1, .portal-title h2 {
-        font-size: 24px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
     .container {
         flex-direction: column;
-        padding: 2rem;
+        padding: 1rem;
         margin-top: 60px;
     }
 
@@ -1507,19 +1485,11 @@ html, body {
     }
 
     .content-section h1 {
-        font-size: 28px;
-    }
-
-    .mission-text, .description {
-        font-size: 14px;
+        font-size: 24px;
     }
 
     .motto {
         font-size: 32px;
-    }
-
-    .motto-translation {
-        font-size: 14px;
     }
 
     .image-section {
@@ -1527,18 +1497,27 @@ html, body {
         padding: 1rem;
     }
 
-    .image-wrapper {
-        max-width: 100%;
-    }
-
-    .login-section, .signup-section, .forgot-password-section {
+    .login-section, .signup-section, .forgot-password-section, .contact-section {
         width: 100%;
         padding: 2rem;
     }
 
-    .form-group input {
-        padding: 0.8rem;
-        font-size: 14px;
+    .about-cards, .mve-boxes {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    .portal-title h1, .portal-title h2 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
     }
 
     .button-container {
@@ -1552,7 +1531,7 @@ html, body {
     }
 
     .footer {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
     }
 
     .contact-info {
@@ -1560,12 +1539,32 @@ html, body {
         gap: 0.5rem;
         text-align: center;
     }
+
+    .form-group input {
+        padding: 0.8rem;
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 375px) {
+    .content-section h1 {
+        font-size: 20px;
+    }
+
+    .motto {
+        font-size: 24px;
+    }
+
+    .portal-title h1, .portal-title h2 {
+        font-size: 16px;
+    }
 }
 
 /* Tablet Adjustments */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
-        padding: 3rem;
+        padding: 2rem;
     }
 
     .content-section {
@@ -1576,7 +1575,11 @@ html, body {
         width: 45%;
     }
 
-    .login-section, .signup-section, .forgot-password-section {
+    .about-cards, .mve-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .login-section, .signup-section, .forgot-password-section, .contact-section {
         width: 50%;
     }
 }
@@ -1588,7 +1591,20 @@ html, body {
         min-height: calc(100vh - 50px);
     }
 
-    .login-section, .signup-section, .forgot-password-section {
+    .content-section {
+        margin-top: 0;
+    }
+
+    .login-section, .signup-section, .forgot-password-section, .contact-section {
         overflow-y: auto;
+        padding-top: 60px;
+    }
+
+    .motto {
+        font-size: 28px;
+    }
+
+    .about-cards, .mve-boxes {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
