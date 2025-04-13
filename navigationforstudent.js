@@ -775,4 +775,113 @@ heartButton.addEventListener('click', function() {
 
 // Inside the scholarship button click handler, after keeping main content visible
 
+/* Mobile Responsive (640px) */
+@media screen and (max-width: 640px) {
+    .container {
+        flex-direction: column;
+        padding: 0.5rem;
+        margin-top: 50px;
+    }
 
+    .content-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .content-section h1 {
+        font-size: 20px;
+    }
+
+    .mission-text {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .motto {
+        font-size: 26px;
+    }
+
+    .motto-translation {
+        font-size: 13px;
+    }
+
+    .portal-title h1, .portal-title h2 {
+        font-size: 16px;
+    }
+
+    .button-container {
+        gap: 8px;
+    }
+
+    .portal-btn {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* Tablet/Medium Screens (896px) */
+@media screen and (max-width: 896px) {
+    .container {
+        padding: 1rem;
+        margin-top: 60px;
+    }
+
+    .content-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content-section h1 {
+        font-size: 22px;
+    }
+
+    .mission-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .motto {
+        font-size: 30px;
+    }
+
+    .motto-translation {
+        font-size: 15px;
+    }
+
+    .portal-title h1, .portal-title h2 {
+        font-size: 18px;
+    }
+
+    .button-container {
+        gap: 12px;
+    }
+
+    .portal-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo-img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Landscape Mode for both breakpoints */
+@media screen and (max-height: 640px) and (orientation: landscape) {
+    .container {
+        margin-top: 45px;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .motto-section {
+        padding: 10px 0;
+    }
+}
