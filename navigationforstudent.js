@@ -656,7 +656,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Logout button clicked');
         if (loadingScreen) loadingScreen.classList.add('active');
         setTimeout(() => {
-            window.location.href = 'firstpage.html';
+            window.location.href = 'index.html';
         }, 5000);
     }
     
