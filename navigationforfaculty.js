@@ -211,9 +211,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add School News functionality
-const schoolNewsButton = document.querySelector('.grid-item:nth-child(3)');
+ const schoolNewsButton = document.querySelector('.grid-item:nth-child(3)');
 
-if (schoolNewsButton) {
+ if (schoolNewsButton) {
     schoolNewsButton.addEventListener('click', function(e) {
         e.preventDefault();
         
@@ -223,7 +223,7 @@ if (schoolNewsButton) {
             newsLink.click();
         }
     });
-}
+  }
 
 
     // Add classes button functionality
@@ -404,7 +404,7 @@ if (schoolNewsButton) {
         
         
     });
-}
+ }
     
    
     
@@ -586,7 +586,7 @@ if (schoolNewsButton) {
         });
         this.classList.add('active');
     });
-}
+ }
 
 
     
@@ -679,7 +679,7 @@ if (schoolNewsButton) {
         console.log('Logout button clicked');
         if (loadingScreen) loadingScreen.classList.add('active');
         setTimeout(() => {
-            window.location.href = 'https://geanncarl12.github.io/RMC-TAGUM-SCHOOL-PORTAL/';
+            window.location.href = 'index.html';
         }, 5000);
     }
     
@@ -691,14 +691,14 @@ if (schoolNewsButton) {
     if (navbarLogoutButton) {
         navbarLogoutButton.addEventListener('click', handleLogout);
     }
-});
+ });
 
 // Add this to handle notification bell click
 document.querySelector('.bell-icon').addEventListener('click', function(e) {
     e.stopPropagation();
     const dropdown = document.querySelector('.notification-dropdown');
     dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
-});
+ });
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function(e) {
@@ -706,7 +706,7 @@ document.addEventListener('click', function(e) {
     if (!e.target.closest('.notification-dropdown') && !e.target.closest('.bell-icon')) {
         dropdown.style.display = 'none';
     }
-});
+ });
 
 // Add heart reaction functionality
 const heartButton = newsSection.querySelector('.heart-react i');
@@ -718,7 +718,7 @@ heartButton.addEventListener('click', function() {
     this.className = isLiked ? 'fas fa-heart' : 'far fa-heart';
     heartCount.textContent = isLiked ? '4' : '3';
     this.style.color = isLiked ? '#ff4444' : '#666';
-});
+ });
 
 // Inside the scholarship button click handler, after keeping main content visible
 
