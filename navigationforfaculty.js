@@ -21,55 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainContent = document.querySelector('.main-content');
 
     // Add balance button functionality
-    if (balanceButton) {
-        balanceButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Balance button clicked');
-            
-            // Hide other sections
-            if (dashboardContainer) dashboardContainer.style.display = 'none';
-            if (welcomeBanner) welcomeBanner.style.display = 'none';
-            if (clearanceSection) clearanceSection.style.display = 'none';
-            if (todosSection) todosSection.style.display = 'none';
-            if (mainContent) mainContent.style.display = 'block';
-            
-            // Create balance content if not exists
-            if (!document.querySelector('.balance-section')) {
-                balanceSection.innerHTML = `
-                    <div class="balance-container">
-                        <h2>Student Balance</h2>
-                        <div class="balance-summary">
-                            <div class="total-balance">
-                                <span>Total Balance:</span>
-                                <span class="amount">₱3,430.00</span>
-                            </div>
-                            <div class="term-balance">
-                                <span>First Semester 2024-25</span>
-                            </div>
-                        </div>
-                        <div class="payment-history">
-                            <h3>Payment History</h3>
-                            <div class="history-list">
-                                <div class="history-item">
-                                    <span class="date">May 15, 2024</span>
-                                    <span class="description">Tuition Fee Payment</span>
-                                    <span class="amount">₱1,500.00</span>
-                                </div>
-                                <div class="history-item">
-                                    <span class="date">May 10, 2024</span>
-                                    <span class="description">Miscellaneous Fee</span>
-                                    <span class="amount">₱430.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-                document.querySelector('.main-content').appendChild(balanceSection);
-            }
-            
-            // Show balance section
-            balanceSection.style.display = 'block';
-        });
-    }
+   
 
     // Add dashboard button functionality
     const dashboardLink = document.querySelector('.nav-menu a[href="#dashboard"]');
@@ -86,9 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide other sections
             if (clearanceSection) clearanceSection.style.display = 'none';
             if (todosSection) todosSection.style.display = 'none';
+            if (mainContent) mainContent.style.display = 'block';
+            if (todosSection) todosSection.style.display = 'none';
             if (classesSection) classesSection.style.display = 'none';
             if (announcementsSection) announcementsSection.style.display = 'none';
-            if (profileContent) profileContent.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
             
             // Update active state in navigation
             document.querySelectorAll('.nav-menu a').forEach(link => {
@@ -136,18 +96,32 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.profile-trigger, .profile-link, .nav-profile').forEach(trigger => {
         trigger.addEventListener('click', function(e) {
             e.preventDefault();
-            const mainContent = document.querySelector('.dashboard-container');
+            const mainContent = document.querySelector('.main-content');
             const profileContent = document.querySelector('.profile-content');
             const welcomeBanner = document.querySelector('.welcome-banner');
+            const dashboardContainer = document.querySelector('.dashboard-container');
+            
+            // Hide all other sections
+            if (clearanceSection) clearanceSection.style.display = 'none';
+            if (todosSection) todosSection.style.display = 'none';
+            if (classesSection) classesSection.style.display = 'none';
+            if (announcementsSection) announcementsSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
             
             if (profileContent.style.display === 'none') {
-                mainContent.style.display = 'none';
                 welcomeBanner.style.display = 'none';
+                dashboardContainer.style.display = 'none';
                 profileContent.style.display = 'block';
+                mainContent.style.display = 'block'; // Keep main content visible
             } else {
-                mainContent.style.display = 'flex';
                 welcomeBanner.style.display = 'flex';
+                dashboardContainer.style.display = 'flex';
                 profileContent.style.display = 'none';
+                mainContent.style.display = 'block';
             }
         });
     });
@@ -155,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     // Add Clinic History functionality
-    const clinicHistoryButton = document.querySelector('.grid-item:nth-child(3)');
+    const clinicHistoryButton = document.querySelector('.grid-item:nth-child(1)');
     const clinicSection = document.querySelector('.clinic-section') || document.createElement('div');
     clinicSection.classList.add('clinic-section');
     
@@ -236,6 +210,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Add School News functionality
+const schoolNewsButton = document.querySelector('.grid-item:nth-child(3)');
+
+if (schoolNewsButton) {
+    schoolNewsButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Trigger the news link click event
+        const newsLink = document.querySelector('.nav-menu a[href="#news"]');
+        if (newsLink) {
+            newsLink.click();
+        }
+    });
+}
+
+
     // Add classes button functionality
     const classesLink = document.querySelector('.nav-menu a[href="#classes"]');
     const classesSection = document.createElement('div');
@@ -253,15 +243,23 @@ document.addEventListener('DOMContentLoaded', function() {
             if (clearanceSection) clearanceSection.style.display = 'none';
             if (todosSection) todosSection.style.display = 'none';
             if (mainContent) mainContent.style.display = 'block'; // Keep main content visible
-    
+            if (announcementsSection) announcementsSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+
             // Create classes content if not exists
-            // Inside the classesLink click handler where the classes section is created
+            // Inside the classesLink click handler, after the schedule table
             if (!document.querySelector('.classes-section')) {
                 classesSection.innerHTML = `
                     <div class="student-header">
                         <div class="student-info">
                             <h2>Tan, Jim Ross Ryan</h2>
-                            <p> 12 - Einstein Adviser</p>
+                            <p>Grade 12 Einstein</p>
                         </div>
                         <div class="schedule-icons">
                             <div class="icon-item">
@@ -272,10 +270,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <i class="fas fa-tasks"></i>
                                 <span>To-dos</span>
                             </div>
-                            <div class="icon-item create-test" id="createTestBtn">
-                                <i class="fas fa-edit"></i>
-                                <span>Create Test</span>
-                            </div>
+                             <div class="icon-item" onclick="showTestSection()">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Create Test</span>
+            </div>
+        </div>
                         </div>
                     </div>
                     <div class="schedule-header">
@@ -294,21 +293,21 @@ document.addEventListener('DOMContentLoaded', function() {
                             <td class="time-column">7:30-11:30 AM<br>(ADVISORY)</td>
                             <td>
                                 <div class="class-info">
-                                    <div class="subject-code">EINSTEIN</div>
+                                    <div class="subject-code">MS. DAGPIN</div>
                                 </div>
                             </td>
                             <td></td>
                             <td>
                                 <div class="class-info">
                                     <div class="subject-code">APP 7a</div>
-                                    <div class="teacher-name">EINSTEIN</div>
+                                    <div class="teacher-name">MS. BIODES</div>
                                 </div>
                             </td>
                             <td></td>
                             <td>
                                 <div class="class-info">
                                     <div class="subject-code">STEM 8</div>
-                                    <div class="teacher-name">HAWKING</div>
+                                    <div class="teacher-name">MS. TUAZON</div>
                                 </div>
                             </td>
                         </tr>
@@ -317,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <td>
                                 <div class="class-info">
                                     <div class="subject-code">STEM 7</div>
-                                    <div class="teacher-name">TESLA</div>
+                                    <div class="teacher-name">MS. CAMPOREDONDO</div>
                                 </div>
                             </td>
                             <td>
@@ -366,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </td>
                             <td></td>
                         </tr>
-                        <tr>
+                         <tr>
                             <td class="time-column">3:00-4:30 PM</td>
                             <td>
                                 <div class="class-info">
@@ -395,44 +394,15 @@ document.addEventListener('DOMContentLoaded', function() {
                             </td>
                         </tr>
                     </table>`;
-        
-        // Add event listener for create test button
-        const createTestBtn = classesSection.querySelector('#createTestBtn');
-        if (createTestBtn) {
-            createTestBtn.addEventListener('click', function() {
-                // Hide all sections
-                if (dashboardContainer) dashboardContainer.style.display = 'none';
-                if (welcomeBanner) welcomeBanner.style.display = 'none';
-                if (clearanceSection) clearanceSection.style.display = 'none';
-                if (todosSection) todosSection.style.display = 'none';
-                if (classesSection) classesSection.style.display = 'none';
-                if (announcementsSection) announcementsSection.style.display = 'none';
-                if (newsSection) newsSection.style.display = 'none';
-                if (enrollmentSection) enrollmentSection.style.display = 'none';
-                if (mvvSection) mvvSection.style.display = 'none';
-                if (balanceSection) balanceSection.style.display = 'none';
-                if (scholarshipSection) scholarshipSection.style.display = 'none';
-        
-                // Create and show test section
-               
-        
-                // Show test section and main content
-                testSection.style.display = 'block';
-                mainContent.style.display = 'block';
-            });
-        }
-
-        document.querySelector('.main-content').appendChild(classesSection);
+    
+    
+            document.querySelector('.main-content').appendChild(classesSection);
         }
     
         // Show classes section
         classesSection.style.display = 'block';
         
-        // Update active state in navigation
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.classList.remove('active');
-        });
-        this.classList.add('active');
+        
     });
 }
     
@@ -454,6 +424,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (todosSection) todosSection.style.display = 'none';
             if (classesSection) classesSection.style.display = 'none';
             if (mainContent) mainContent.style.display = 'block';
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
 
             // Create announcements content if not exists
             if (!document.querySelector('.announcements-section')) {
@@ -491,48 +468,34 @@ document.addEventListener('DOMContentLoaded', function() {
             announcementsSection.style.display = 'block';
             
             // Update active state in navigation
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.classList.remove('active');
-            });
-            this.classList.add('active');
+            
         });
     }
 
     
 
-    // Add school news button functionality
+    // Add news button functionality
     const newsLink = document.querySelector('.nav-menu a[href="#news"]');
     const newsSection = document.createElement('div');
     newsSection.classList.add('news-section');
 
-    // Add this function at the top of your DOMContentLoaded event handler
-    function hideAllSections() {
-        const sections = [
-            dashboardContainer,
-            welcomeBanner,
-            clearanceSection,
-            todosSection,
-            classesSection,
-            announcementsSection,
-            newsSection,
-            mvvSection,
-            enrollmentSection,
-            balanceSection,
-            scholarshipSection,
-        ];
-        
-        sections.forEach(section => {
-            if (section) section.style.display = 'none';
-        });
-    }
-
-    // Update the news link click handler
     if (newsLink) {
         newsLink.addEventListener('click', function(e) {
             e.preventDefault();
-            hideAllSections();
+            
+            // Hide other sections
+            if (dashboardContainer) dashboardContainer.style.display = 'none';
+            if (welcomeBanner) welcomeBanner.style.display = 'none';
+            if (clearanceSection) clearanceSection.style.display = 'none';
+            if (todosSection) todosSection.style.display = 'none';
+            if (classesSection) classesSection.style.display = 'none';
             if (mainContent) mainContent.style.display = 'block';
-    
+            if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (announcementsSection) announcementsSection.style.display = 'none';
+
             // Create news content if not exists
             if (!document.querySelector('.news-section')) {
                 newsSection.innerHTML = `
@@ -624,35 +587,51 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.add('active');
     });
 }
+
+
     
     // Add enrollment button functionality
     const enrollmentLink = document.querySelector('.nav-menu a[href="#enrollment"]');
-    const enrollmentSection = document.createElement('div');
-    enrollmentSection.classList.add('enrollment-section');
-    
-    // Add enrollment section handler
-    document.querySelector('a[href="#enrollment"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        hideAllSections();
-        document.querySelector('.enrollment-section').style.display = 'block';
-    });
-    
-    function hideAllSections() {
-        // Hide all sections
-        document.querySelector('.dashboard-container').style.display = 'none';
-        document.querySelector('.welcome-banner').style.display = 'none';
-        document.querySelector('.profile-content').style.display = 'none';
-        document.querySelector('.clearance-section').style.display = 'none';
-        document.querySelector('.todos-section').style.display = 'none';
-        document.querySelector('.class-schedule-section').style.display = 'none';
-        document.querySelector('.school-news-section').style.display = 'none';
-        document.querySelector('.enrollment-section').style.display = 'none';
-    }
+    const enrollmentSection = document.querySelector('.enrollment-section');
 
+    if (enrollmentLink) {
+        enrollmentLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Hide other sections
+            if (dashboardContainer) dashboardContainer.style.display = 'none';
+            if (welcomeBanner) welcomeBanner.style.display = 'none';
+            if (clearanceSection) clearanceSection.style.display = 'none';
+            if (todosSection) todosSection.style.display = 'none';
+            if (classesSection) classesSection.style.display = 'none';
+            if (announcementsSection) announcementsSection.style.display = 'none';
+            if (newsSection) newsSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (mvvSection) mvvSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+    
+            // Create enrollment content if not exists
+            if (!document.querySelector('.enrollment-section')) {
+                // Your enrollment section HTML content here
+                document.querySelector('.main-content').appendChild(enrollmentSection);
+            }
+    
+            // Show enrollment section
+            enrollmentSection.style.display = 'block';
+            
+            // Update active state in navigation
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    }
+    
     // Add MVV button functionality
     const mvvLink = document.querySelector('.nav-menu a[href="#mvv"]');
     const mvvSection = document.querySelector('.mvv-section');
-    
+   
     if (mvvLink) {
         mvvLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -666,9 +645,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (announcementsSection) announcementsSection.style.display = 'none';
             if (newsSection) newsSection.style.display = 'none';
             if (enrollmentSection) enrollmentSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none'
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (clinicSection) clinicSection.style.display = 'none';
+            if (balanceSection) balanceSection.style.display = 'none';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+          
+           
+            if (mainContent) mainContent.style.display = 'block';
+            if (scholarshipSection) scholarshipSection.style.display = 'none';
+            
+            
+            // Create MVV content if not exists
+            
             
             // Show MVV section
-            if (mvvSection) mvvSection.style.display = 'block';
+            mvvSection.style.display = 'block';
             if (mainContent) mainContent.style.display = 'block';
             
             // Update active state in navigation
@@ -685,7 +679,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Logout button clicked');
         if (loadingScreen) loadingScreen.classList.add('active');
         setTimeout(() => {
-            window.location.href = 'firstpage.html';
+            window.location.href = 'index.html';
         }, 5000);
     }
     
@@ -727,36 +721,4 @@ heartButton.addEventListener('click', function() {
 });
 
 // Inside the scholarship button click handler, after keeping main content visible
-// Add test section navigation
-const testLink = document.querySelector('a[href="#test"]');
-const testSection = document.querySelector('.test-section');
-
-if (testLink && testSection) {
-    testLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        hideAllSections();
-        testSection.style.display = 'block';
-    });
-}
-
-// Test creation functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const addQuestionBtn = document.querySelector('.add-question');
-    const questionsContainer = document.querySelector('.questions-container');
-    let questionCount = 1;
-
-    if (addQuestionBtn && questionsContainer) {
-        addQuestionBtn.addEventListener('click', function() {
-            questionCount++;
-            // Clone the first question card and reset its values
-            const newQuestion = questionsContainer.querySelector('.question-card').cloneNode(true);
-            newQuestion.querySelector('.question-number').textContent = `Question ${questionCount}`;
-            newQuestion.querySelector('.question-text').value = '';
-            newQuestion.querySelectorAll('.option input[type="text"]').forEach(input => input.value = '');
-            newQuestion.querySelectorAll('.option input[type="radio"]').forEach(radio => radio.checked = false);
-            questionsContainer.appendChild(newQuestion);
-        });
-    }
-});
-
 
