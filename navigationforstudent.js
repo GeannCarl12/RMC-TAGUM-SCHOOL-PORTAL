@@ -775,113 +775,140 @@ heartButton.addEventListener('click', function() {
 
 // Inside the scholarship button click handler, after keeping main content visible
 
-/* Mobile Responsive (640px) */
+/* Base responsive styles */
 @media screen and (max-width: 640px) {
-    .container {
-        flex-direction: column;
-        padding: 0.5rem;
-        margin-top: 50px;
-    }
-
-    .content-section {
+    .navbar {
+        padding: 8px 15px;
+        position: fixed;
         width: 100%;
-        padding: 15px;
+        z-index: 1000;
     }
 
-    .content-section h1 {
-        font-size: 20px;
+    .logo-section {
+        gap: 5px;
     }
 
-    .mission-text {
-        font-size: 13px;
-        line-height: 1.4;
-    }
-
-    .motto {
-        font-size: 26px;
-    }
-
-    .motto-translation {
-        font-size: 13px;
+    .logo-img {
+        width: 30px;
+        height: 30px;
     }
 
     .portal-title h1, .portal-title h2 {
         font-size: 16px;
     }
 
+    .container {
+        flex-direction: column;
+        padding: 10px;
+        margin-top: 60px;
+        gap: 15px;
+    }
+
+    .content-section {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        border-radius: 8px;
+    }
+
+    .content-section h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .mission-text {
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 0 5px;
+        text-align: justify;
+    }
+
+    .motto-section {
+        margin: 15px 0;
+    }
+
+    .motto {
+        font-size: 26px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .motto-translation {
+        font-size: 14px;
+        text-align: center;
+    }
+
     .button-container {
-        gap: 8px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
 
     .portal-btn {
-        padding: 10px;
-        font-size: 13px;
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
     }
 }
 
-/* Tablet/Medium Screens (896px) */
-@media screen and (max-width: 896px) {
+@media screen and (min-width: 641px) and (max-width: 896px) {
     .container {
-        padding: 1rem;
-        margin-top: 60px;
+        padding: 15px;
+        margin-top: 70px;
+        gap: 20px;
     }
 
     .content-section {
         width: 100%;
         padding: 20px;
+        margin: 0;
     }
 
     .content-section h1 {
         font-size: 22px;
+        margin-bottom: 15px;
     }
 
     .mission-text {
         font-size: 14px;
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .motto {
         font-size: 30px;
+        margin: 15px 0;
     }
 
     .motto-translation {
-        font-size: 15px;
-    }
-
-    .portal-title h1, .portal-title h2 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .button-container {
-        gap: 12px;
+        gap: 15px;
     }
 
     .portal-btn {
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    .navbar {
-        padding: 10px 20px;
-    }
-
-    .logo-img {
-        width: 35px;
-        height: 35px;
+        padding: 12px 20px;
+        font-size: 15px;
     }
 }
 
-/* Landscape Mode for both breakpoints */
-@media screen and (max-height: 640px) and (orientation: landscape) {
-    .container {
-        margin-top: 45px;
-    }
+/* Fix for iOS and mobile browsers */
+html {
+    -webkit-text-size-adjust: 100%;
+}
 
-    .content-section {
-        padding: 15px;
-    }
+body {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
 
-    .motto-section {
-        padding: 10px 0;
-    }
+/* Touch optimization */
+.portal-btn, input {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    border-radius: 4px;
 }
